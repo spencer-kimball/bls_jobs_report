@@ -1,0 +1,68 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+change.feb2020 <- ifelse(alldemo$group == 'group[x] & alldemo$year >= 2020, alldemo[alldemo$group == 'group[x]' & alldemo$year >= 2020, "value"] - alldemo[alldemo$group == 'group[x]'& alldemo$year == 2020 $ alldemo$periodName == 'February', 'value'], NA)
+
+pandemic.values <- alldemo[alldemo$group == 'group[x]' & alldemo$year == 2020, 'value']
+february2020 <- alldemo[alldemo$group == 'group[x]' & alldemo$year == 2020 & alldemo$periodName == 'February', 'value']
+temp_values <- pandemic.values - february2020 
+change.feb.2020 <- temp_values 
+
+
+
+THE NAs!!!!!
+
+ifelse(test = labor_force_df[labor_force_df$group == "Labor.Part.Rate" & labor_force_df$year >= 2021,], yes = labor_force_df[labor_force_df$group == "Labor.Part.Rate" & labor_force_df$year >= 2021, "value"] -  labor_force_df[labor_force_df$group == "Labor.Part.Rate" & labor_force_df$year == 2020 & labor_force_df$periodName == "February", "value"], no = NA )
+
+
+group_df <- alldemo[alldemo$group == 'group[x]',]
+temp_values <- ifelse(group_df$year >= 2020, group_df[group_df$year >=2020,'value'] - group_df[group_df$year == 2020 & group_df$periodName == 'February', 'value'], NA)
+change.feb.2020 <- append(change.feb.2020, temp_values)
+alldemo <- cbind(alldemo, change.feb.2020)
+
+if(df$year >= 2020){
+      if(df$year == 2020 & df$periodName == 'January'
+                temp_values)
+      
+      <- df[df$year >=2020,'value'] - df[df$year == 2020 & df$periodName == 'February', 'value']
+}
+
+
+df[df$year == 2020 & df$periodName == 'January', c('change.feb.2020', 'change.pct.feb.2020')] <- NA
+
+            df$change.feb.2020[df$change.feb.2020 == ""] <- NA
+            
+          
+          
+  df$change.feb.2020 <- ifelse(df$year >= 2020, df[df$year >=2020,'value'] - df[df$year == 2020 & df$periodName == 'February', 'value'], NA)
+                
+                temp_values <- ifelse(df$year >= 2020, ((df[df$year >=2020,'value'] - df[df$year == 2020 & df$periodName == 'February', 'value'])/df[df$year >=2020,'value']) * 100, NA)
+                
+                df$change.pct.feb.2020 <- round(temp_values, 1)
+                
+                df[df$year == 2020 & df$periodName == 'January', c('change.feb.2020', 'change.pct.feb.2020')] <- NA
+        
+        
+resp_education_genderrace <- blsAPI(payload_education_genderrace,2)
+json_education_genderrace <- fromJSON(resp_education_genderrace)
+education_genderrace_data <- json_education_genderrace$Results$series$data
+education_genderrace_df <- education_genderrrace_funct(education_genderrace_data)
+
+
+
+list('seriesid' = c(), 'startyear' = 2019, 'endyear' = 2021, 'calculations' = TRUE, 'registrationKey' = registrationKey)
+
+unemp_rate_filter <- unemp_rate_df[unemp_rate_df$group %in% c('White', 'Black', 'Hispanic','Asian',
+                                         'White.Men.20','White.Women.20','Black.Men.20', 
+                                         'Black.Women.20', 'Hispanic.Men.20', 'Hispanic.Women.20', 
+                                         'Asian.Men.20.Unadj','Asian.Women.20.Unadj') 
+              & unemp_rate_df$year == 2021 & unemp_rate_df$periodName %in% c('August','July'),]
+
+labor_force_filter <- labor_force_df[labor_force_df$group %in% c('White', 'Black', 'Hispanic','Asian',
+                                                              'White.Men.20','White.Women.20','Black.Men.20', 
+                                                              'Black.Women.20', 'Hispanic.Men.20', 'Hispanic.Women.20', 
+                                                              'Asian.Men.20.Unadj','Asian.Women.20.Unadj') 
+                                   & labor_force_df$year == 2021 & labor_force_df$periodName %in% c('June', 'July'),] 
+
+                
